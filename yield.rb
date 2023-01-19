@@ -45,18 +45,16 @@ puts yield_calculator(56, 8)
 
 
 def beautify_name(first_name, last_name)
-    full_name = "#{first_name.capitalize} #{last_name.upcase}"
-    yield(full_name)
-  end
+  full_name = "#{first_name.capitalize} #{last_name.upcase}"
+  yield(full_name)
+end
 
-  message = beautify_name("john", "lennnon") do |elemento|
-    string = "olá #{elemento}"
-    puts string
-  end
-  message = beautify_name("john", "lennnon") { |emento| puts elemento }
-  
-
-  # puts message # => "Greetings John LENNON, you look quite fine today!"
+message = beautify_name("john", "lennnon") do |elemento|
+  string = "olá #{elemento}"
+  puts string
+end
+message = beautify_name("john", "lennnon") { |emento| puts elemento }
+# puts message # => "Greetings John LENNON, you look quite fine today!"
 
 
 
